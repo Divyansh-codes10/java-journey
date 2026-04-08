@@ -1,0 +1,30 @@
+import java.util.*;
+class SentenceAndWordChecker
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        String s,a,s1="";
+        char ch;
+        int i,j,p=0,c=0;
+        System.out.println("Enter the sentence and the word to be searched");
+        s=in.nextLine();
+        a=in.next();
+        s=s+' ';
+        p=s.length();
+        for(i=0;i<p;i++)
+        {
+            ch=s.charAt(i);
+            if(ch==' ')
+            {
+                if(s1.compareTo(a)==0)
+                
+                    c++;
+                s1="";
+            }
+             else
+                s1+=ch;
+        }
+        System.out.println(a+" is present in: "+s+" "+c+" number of times");
+    }
+}
